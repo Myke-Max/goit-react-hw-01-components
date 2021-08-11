@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 export default function StatisticList({ title, stats }) {
   return (
     <section className="statistics">
-      <h2 className="title">{title}</h2>
+      {title && <h2 className="title">{title}</h2>}
 
       <ul className="stat-list">
         {stats.map(({ id, label, percentage }) => (
@@ -17,7 +17,12 @@ export default function StatisticList({ title, stats }) {
 }
 
 StatisticList.protoTypes = {
-  id: PropTypes.number,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number,
+    }),
+  ),
 };
