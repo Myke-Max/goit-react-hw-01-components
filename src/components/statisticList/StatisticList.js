@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import '../statisticList/statistics.css';
+
 export default function StatisticList({ title, stats }) {
   return (
     <section className="statistics">

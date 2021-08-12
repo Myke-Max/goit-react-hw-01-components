@@ -1,0 +1,18 @@
+/* task2 */
+.statistics {
+  margin-bottom: 30px;
+}
+
+.stat-list {
+  display: flex;
+  margin: -10px;
+}
+
+.stat-list .item {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 5 * 20px) / 5);
+  margin: 10px;
+  background-color: gainsboro;
+  border-radius: 10px;
+}
