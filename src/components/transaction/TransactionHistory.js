@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import '../transaction/transaction.css';
 
 export default function TransactionHistory({ items }) {
-  console.log(items);
   return (
     <table className="transaction-history">
       <thead>
